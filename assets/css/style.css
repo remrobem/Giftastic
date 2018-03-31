@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray    
+    background-color: lightgray
 }
 
 .btn {
@@ -9,8 +9,16 @@ body {
 }
 
 button,
-    div,
-    form,
-    input {
-      margin: 10px;
-    }
+div,
+form,
+input {
+    margin: 10px;
+}
+
+#gifs {
+    width: 70%;
+}
+
+img {
+    margin: 5px;
+}
