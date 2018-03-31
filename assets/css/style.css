@@ -1,0 +1,16 @@
+body {
+    background-color: lightgray    
+}
+
+.btn {
+    margin: 5px;
+    background-color: rgb(39, 129, 131);
+    color: white
+}
+
+button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
