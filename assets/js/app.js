@@ -3,6 +3,7 @@ const theme = 'mascots';
 
 let buttonArr = ['MLB', 'NBA', 'NHL', 'NFL', 'RACING', 'EATING', 'DANCING', 'KIDS'];
 
+//display the buttons to select gifs
 function displayButtons() {
 
     $('#gifButtons').empty();
@@ -17,6 +18,7 @@ function displayButtons() {
     };
 };
 
+//API call to giphy to retreive and then render the gifs
 function displayGifs() {
 
     let selectedItem = $(this).attr('data-value');
@@ -28,6 +30,8 @@ function displayGifs() {
 
     $('#gifs').empty();
 
+
+    // get the gifs from giphy API
     $.ajax({
         url: queryURL,
         method: 'GET'
@@ -35,6 +39,8 @@ function displayGifs() {
         let results = response.data;
         console.log(results);
 
+
+        // render the gifs that are rated less than R
         for (var i = 0; i < results.length; i++) {
             if (['g', 'pg', 'pg-13'].includes(results[i].rating)) {
                 
@@ -62,6 +68,8 @@ function displayGifs() {
     });
 };
 
+
+// the gifs are initially loaded as a still. this logic toggles individual gif between still and animattion
 function animation() {
 
     var state = $(this).attr('data-state');
@@ -75,6 +83,7 @@ function animation() {
     };
 };
 
+// add a new button when the user provides additonal selection 
 function addButton(event) {
 
     event.preventDefault();
@@ -103,7 +112,7 @@ function addButton(event) {
 };
 
 
-
+// main routine to start and set events
 $(document).ready(function () {
 
     displayButtons();
