@@ -1,5 +1,6 @@
 body {
     background-color: lightgray
+    
 }
 
 .btn {
@@ -21,4 +22,12 @@ input {
 
 img {
     margin: 5px;
+}
+
+#gif-form {
+    float:  right;
+}
+
+.floatBox {
+    float: left;
 }
